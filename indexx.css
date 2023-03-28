@@ -13,9 +13,17 @@
 } */
 
 .header {
+  margin: auto;
   padding-top: 28px;
   width: 100%;
+  max-width: 880px;
   border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+
+@media screen and (min-width: 619px) {
+  .header {
+    padding-top: 45px;
+  }
 }
 
 .logo {
@@ -24,13 +32,34 @@
   margin: 0 0 28px 27px;
 }
 
+@media screen and (min-width: 619px) {
+  .logo {
+    width: 142px;
+    height: 33px;
+    margin-bottom: 41px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .logo {
+    margin-left: 0;
+  }
+}
+
 .profile {
   width: calc(100% - 2*19px);
+  max-width: 880px;
   margin: auto;
   padding-top: 42px;
 }
 
-.avatar {
+@media screen and (min-width: 619px) {
+  .profile {
+    display: flex;
+  }
+}
+
+.profile__avatar {
   display: block;
   width: 120px;
   height: 120px;
@@ -38,10 +67,24 @@
   margin: auto;
 }
 
+@media screen and (min-width: 619px) {
+  .profile__avatar {
+    margin: 0;
+  }
+}
+
 .profile__info {
   position: relative;
   margin: 26px auto 36px;
   max-width: 282px;
+}
+
+@media screen and (min-width: 619px) {
+  .profile__info {
+    max-width: 336px;
+    margin: auto;
+    margin-left: 30px;
+  }
 }
 
 .profile__name {
@@ -53,6 +96,13 @@
   text-align: center;
 }
 
+@media screen and (min-width: 619px) {
+  .profile__name {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
+
 .profile__about {
   margin: 0;
   font-style: normal;
@@ -62,9 +112,19 @@
   text-align: center;
 }
 
+@media screen and (min-width: 619px) {
+  .profile__about {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .profile__edit-button {
+  display: block;
+  box-sizing: border-box;
   width: 18px;
   height: 18px;
+  background-color: #000000;
   border: 1px solid #fff;
   position: absolute;
   top: 8px;
@@ -75,7 +135,15 @@
   background-position: center;
 }
 
+.profile__edit-button:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
 .profile__add-button {
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
   width: 282px;
   height: 50px;
   border: 2px solid #fff;
@@ -84,4 +152,54 @@
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
+  background-color: #000000;
+}
+
+@media screen and (min-width: 619px) {
+  .profile__add-button {
+    width: 150px;
+    margin: auto 0 auto;
+    justify-self: end;
+  }
+}
+
+.profile__add-button:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
+.elements {
+  margin: auto;
+  width: calc(100% - 2*19px);
+  max-width: 880px;
+  padding-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  justify-content: center;
+  gap: 20px 17px;
+}
+
+.element {
+  box-sizing: border-box;
+  margin: auto;
+  width: 282px;
+  height: 361px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.element__image {
+  display: block;
+  width: 282px;
+  object-fit: cover;
+}
+
+.element__title {
+  margin: 0;
+  color: #a82626;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
 }
