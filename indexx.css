@@ -36,7 +36,7 @@
   .logo {
     width: 142px;
     height: 33px;
-    margin-bottom: 41px;
+    margin-bottom: 37px;
   }
 }
 
@@ -53,9 +53,11 @@
   padding-top: 42px;
 }
 
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 700px) {
   .profile {
     display: flex;
+    padding-top: 34px;
+    align-items: center;
   }
 }
 
@@ -67,7 +69,7 @@
   margin: auto;
 }
 
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 700px) {
   .profile__avatar {
     margin: 0;
   }
@@ -75,15 +77,17 @@
 
 .profile__info {
   position: relative;
-  margin: 26px auto 36px;
+  margin: 26px auto 33px;
   max-width: 282px;
 }
 
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 700px) {
   .profile__info {
     max-width: 336px;
-    margin: auto;
+    width: 100%;
+    margin-top: 27px;
     margin-left: 30px;
+    margin-bottom: 27px;
   }
 }
 
@@ -96,10 +100,11 @@
   text-align: center;
 }
 
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 700px) {
   .profile__name {
     font-size: 42px;
     line-height: 48px;
+    text-align: left;
   }
 }
 
@@ -112,10 +117,11 @@
   text-align: center;
 }
 
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 700px) {
   .profile__about {
     font-size: 18px;
     line-height: 22px;
+    text-align: left;
   }
 }
 
@@ -133,6 +139,17 @@
   background-repeat: no-repeat;
   background-size: 7.5px;
   background-position: center;
+  padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .profile__edit-button {
+    top: 15px;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 10px;
+  }
 }
 
 .profile__edit-button:hover {
@@ -153,13 +170,14 @@
   background-size: 16px;
   background-position: center;
   background-color: #000000;
+  padding: 0;
 }
 
-@media screen and (min-width: 619px) {
+@media screen and (min-width: 700px) {
   .profile__add-button {
     width: 150px;
     margin: auto 0 auto;
-    justify-self: end;
+    background-size: 22px;
   }
 }
 
@@ -179,6 +197,12 @@
   gap: 20px 17px;
 }
 
+@media screen and (min-width: 700px) {
+  .elements {
+    padding-top: 46px;
+  }
+}
+
 .element {
   box-sizing: border-box;
   margin: auto;
@@ -190,16 +214,78 @@
 }
 
 .element__image {
-  display: block;
-  width: 282px;
+  width: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
+.element__info {
+  display: flex;
+  justify-content: space-between;
+  margin: 21px 20px 0;
+}
+
 .element__title {
+  max-width: 185px;
   margin: 0;
-  color: #a82626;
+  color: #000000;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__like-button {
+  display: block;
+  width: 22px;
+  height: 19px;
+  background-image: url(./images/Like-disabled.svg);
+  background-size: cover;
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  align-self: center;
+}
+
+.element__like-button:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.element__like-button_active {
+  background-image: url(./images/Like-active.svg);
+}
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 36px;
+  width: calc(100% - 2*19px);
+  max-width: 880px;
+  margin: auto;
+}
+
+@media screen and (min-width: 700px) {
+  .footer {
+    padding-top: 67px;
+    padding-bottom: 60px;
+  }
+}
+
+.footer__copyright {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #545454;
+}
+
+@media screen and (min-width: 700px) {
+  .footer__copyright {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
