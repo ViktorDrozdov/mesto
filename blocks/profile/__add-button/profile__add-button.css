@@ -10,9 +10,10 @@
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
-  background-color: #000000;
+  background-color: transparent;
   padding: 0;
   cursor: pointer;
+  transition: opacity .3s ease;
 }
 
 @media screen and (min-width: 700px) {
