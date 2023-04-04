@@ -16,67 +16,67 @@
         <img src="./images/Cousteau.jpg" alt="аватар" class="profile__avatar">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
           <p class="profile__job">Исследователь океана</p>
-          <button class="profile__edit-button" type="button"></button>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить"></button>
       </section>
       <section class="elements" aria-label="карточки с местами">
-        <div class="element">
-          <img src="./images/Karachaevsk.jpg" alt="Карачаевск" class="element__image">
+        <article class="element">
+          <img src="./images/Karachaevsk.jpg" alt="Сентинский храм на горном хребте" class="element__image">
           <div class="element__info">
             <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button class="element__like-button" type="button"></button>
+            <button class="element__like-button" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
-          <img src="./images/Elbrus.jpg" alt="Эльбрус" class="element__image">
+        </article>
+        <article class="element">
+          <img src="./images/Elbrus.jpg" alt="Вершина Эльбруса на закате" class="element__image">
           <div class="element__info">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like-button" type="button"></button>
+            <button class="element__like-button" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
-          <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
+        </article>
+        <article class="element">
+          <img src="./images/Dombay.jpg" alt="Горы Домбая" class="element__image">
           <div class="element__info">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like-button" type="button"></button>
+            <button class="element__like-button" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
-          <img src="./images/Sakhalin.jpg" alt="Сахалин" class="element__image">
+        </article>
+        <article class="element">
+          <img src="./images/Sakhalin.jpg" alt="Побережье острова Сахалин" class="element__image">
           <div class="element__info">
             <h2 class="element__title">Сахалин</h2>
-            <button class="element__like-button" type="button"></button>
+            <button class="element__like-button" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
-          <img src="./images/Karelia.jpg" alt="Карелия" class="element__image">
+        </article>
+        <article class="element">
+          <img src="./images/Karelia.jpg" alt="Лес на берегу реки в Крелии" class="element__image">
           <div class="element__info">
             <h2 class="element__title">Карелия</h2>
-            <button class="element__like-button" type="button"></button>
+            <button class="element__like-button" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
-          <img src="./images/Sheregesh.jpg" alt="Шерегеш" class="element__image">
+        </article>
+        <article class="element">
+          <img src="./images/Sheregesh.jpg" alt="Закат в горах Шерегеша" class="element__image">
           <div class="element__info">
             <h2 class="element__title">Шерегеш</h2>
-            <button class="element__like-button" type="button"></button>
+            <button class="element__like-button" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
+        </article>
       </section>
-      <footer class="footer">
-        <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
-      </footer>
     </main>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
+    </footer>
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close-button" type="button"></button>
+        <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__header">Редактировать профиль</h2>
-        <form class="popup__form">
-          <input id="name-input" type="text" class="popup__input">
-          <input id="job-input" type="text" class="popup__input">
-          <button class="popup__save-button" type="submit">Сохранить</button>
+        <form class="popup__form" name="popupForm" method="post">
+          <input id="name-input" type="text" class="popup__input" name="userName" placeholder="Имя">
+          <input id="job-input" type="text" class="popup__input" name="userJob" placeholder="О себе">
+          <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
